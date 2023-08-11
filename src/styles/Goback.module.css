@@ -1,0 +1,8 @@
+.goBack {
+  padding: 1.8rem 7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.goBack:hover {
+  text-decoration: underline;
+}
