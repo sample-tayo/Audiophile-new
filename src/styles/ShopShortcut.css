@@ -1,0 +1,36 @@
+.ShopShortcutContainer {
+  position: relative;
+  width: 22rem;
+  height: 10rem;
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ShopShortcutContainer img {
+  position: absolute;
+  top: -30%;
+  left: 30%;
+  width: 40%;
+}
+
+.ShopShortcutMap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10rem 7rem;
+}
+@media screen and (max-width: 768px) {
+  .ShopShortcutMap {
+    flex-direction: column;
+    margin: 4rem 0;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,16 @@
+.customButton {
+  background-color: #d87d4a;
+  font-family: "Manrope";
+  letter-spacing: 0.1rem;
+  color: #fff;
+  padding: 0.88rem 2rem;
+  width: auto;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.customButton:hover {
+  opacity: 0.9;
+}

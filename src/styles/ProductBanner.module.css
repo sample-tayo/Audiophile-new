@@ -1,0 +1,60 @@
+.productBanner {
+  position: relative;
+  width: 100%;
+  height: 87.6vh;
+  background: url("/assets/image-hero.jpg") bottom/cover no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #191919;
+}
+
+.productInfo {
+  margin-left: 7rem;
+  color: white;
+  width: 30%;
+}
+.productInfo h6 {
+  font-size: 1rem;
+  color: gray;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.productInfo h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 3.7rem;
+}
+
+.productInfo p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: grey;
+  margin-bottom: 2rem;
+  width: 23rem;
+}
+@media screen and (max-width: 768px) {
+  .productBanner {
+    background: url("/assets/image-hero-m.jpg") bottom/cover no-repeat;
+    height: 100%;
+    justify-content: center;
+  }
+  .productInfo {
+    width: auto;
+    margin: 5rem 2.2rem 10rem 2.2rem;
+    text-align: center;
+  }
+
+  .product-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .productInfo p {
+    width: auto;
+  }
+  .productInfo h1 {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+}

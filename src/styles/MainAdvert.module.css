@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  /* gap: 2rem; */
+  margin: 7rem 7rem 10rem 7rem;
+}
+
+.box {
+  flex: 1;
+  color: #000;
+  /* background-color: #f1f1f1; */
+}
+
+.imageBox {
+  border-radius: 0.7rem;
+}
+
+.imageBox img {
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 100%;
+}
+
+.textBox {
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textBox h3 {
+  margin: 0;
+  font-size: 2.5rem;
+  word-spacing: 0.2rem;
+}
+
+.textBox p {
+  margin-top: 1rem;
+  width: 85%;
+}
+
+.productInfo {
+  color: #000;
+}
+.productInfo h6 {
+  font-size: 1.7rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    margin: 7rem 1rem 10rem 1rem;
+
+    gap: 2rem;
+  }
+  .textBox h3 {
+    font-size: 1.8rem;
+  }
+  .textBox {
+    text-align: center;
+  }
+  .textBox p {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 7rem;
+}
+
+.box {
+  flex: 1;
+  background-color: #f1f1f1;
+}
+
+.imageBox {
+  border-radius: 0.7rem;
+}
+
+.imageBox img {
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 100%;
+}
+
+.textBox {
+  border-radius: 0.7rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.textBox h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.textBox p {
+  margin-top: 1rem;
+}
+
+.productInfo {
+  /* margin-left: 5rem; */
+  margin: 5rem;
+  color: white;
+}
+.productInfo h6 {
+  font-size: 1.7rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+
+  .productInfo {
+    margin-left: 2rem;
+    color: white;
+    width: 100%;
+  }
+}
