@@ -1,7 +1,8 @@
 import styles from "../styles/ProductBanner.module.css";
 import Button from "./Button";
+import PropTypes from "prop-types";
 
-function ProductBanner() {
+function ProductBanner({ navigateToProduct }) {
   return (
     <div className={styles.productBanner}>
       <div className={styles.productInfo}>
@@ -11,10 +12,13 @@ function ProductBanner() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button />
+        <Button onClick={() => navigateToProduct("xx99-mark-two-headphones")} />
       </div>
     </div>
   );
 }
 
 export default ProductBanner;
+ProductBanner.propTypes = {
+  navigateToProduct: PropTypes.func.isRequired,
+};

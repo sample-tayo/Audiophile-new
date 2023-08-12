@@ -4,6 +4,7 @@ import GoBackBtn from "./GoBackBtn";
 import PropTypes from "prop-types";
 import MainAdvert from "./MainAdvert";
 import ShopShortcutMap from "./ShopShortcut";
+import RandomSuggestedProducts from "./RandomSuggestedProducts";
 import { useLocation } from "react-router-dom";
 
 export default function ViewProductsTab() {
@@ -68,6 +69,8 @@ export default function ViewProductsTab() {
         </div>
       </div>
       <BottomContainer productId={productId} />
+      <RandomSuggestedProducts />
+
       <ShopShortcutMap />
       <MainAdvert />
     </>

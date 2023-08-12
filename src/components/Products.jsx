@@ -30,6 +30,7 @@ function Products({
     console.log("Product ID:", productId);
     console.log("Product Type:", productType);
     console.log("ProductImgSrc:", productImgSrc);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top of the page
 
     navigate(`/${gadgetType}/${productId}`, {
       state: {

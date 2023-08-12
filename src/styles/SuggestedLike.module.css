@@ -1,0 +1,30 @@
+.suggestedComponent {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.suggestedComponent p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.randomSuggestedProducts {
+  display: flex;
+  margin: 0 7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .randomSuggestedProducts {
+    flex-direction: column;
+    margin: 0 2rem;
+    gap: 3rem;
+  }
+  .suggestedComponent {
+    width: 100%;
+  }
+}
