@@ -26,6 +26,7 @@ function EarPhones() {
             // the reason im passing this here is to pass it as props into the button or viewproducts tab display it.. testing... props drilling
             features={product.features}
             price={product.price}
+            gadgetType="earphones"
           />
         ))}
       </div>

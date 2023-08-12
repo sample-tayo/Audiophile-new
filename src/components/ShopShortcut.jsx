@@ -21,7 +21,15 @@ function ShopShortcut({ item }) {
     <div className="ShopShortcutContainer">
       <img src={imgSrc} alt={title} />
       <p style={{ fontWeight: "700", letterSpacing: ".2rem" }}>{title}</p>
-      <p>SHOP </p>
+      <p className="shophover">
+        SHOP
+        {/* <img
+          src="/assets/shared/icon-arrow-right.svg"
+          alt=""
+          width="2rem"
+          height="2rem"
+        /> */}
+      </p>
     </div>
   );
 }

@@ -21,17 +21,17 @@ function Footer() {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/HeadPhones" onClick={handleNavLinkClick}>
+            <NavLink to="/headphones" onClick={handleNavLinkClick}>
               HEADPHONES
             </NavLink>
           </div>
           <div>
-            <NavLink to="/Speakers" onClick={handleNavLinkClick}>
+            <NavLink to="/speakers" onClick={handleNavLinkClick}>
               SPEAKERS
             </NavLink>
           </div>
           <div>
-            <NavLink to="/EarPhones" onClick={handleNavLinkClick}>
+            <NavLink to="/earPhones" onClick={handleNavLinkClick}>
               EARPHONES
             </NavLink>
           </div>

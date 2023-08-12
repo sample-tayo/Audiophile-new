@@ -11,6 +11,7 @@ function Products({
   productId,
   features,
   price,
+  gadgetType,
 }) {
   // STYLING TO REVERSE FLEX DIRECTION FOR EVEN CHILDS
   const containerStyle = {
@@ -30,7 +31,7 @@ function Products({
     console.log("Product Type:", productType);
     console.log("ProductImgSrc:", productImgSrc);
 
-    navigate(`/Earphones/${productId}`, {
+    navigate(`/${gadgetType}/${productId}`, {
       state: {
         productType,
         productInfo,
@@ -78,4 +79,5 @@ Products.propTypes = {
   newProduct: PropTypes.bool.isRequired,
   isEven: PropTypes.bool.isRequired,
   productId: PropTypes.string.isRequired,
+  gadgetType: PropTypes.string.isRequired,
 };

@@ -25,17 +25,17 @@ export default function Navbar() {
             </NavLink>
           </div>
           <div className={styles["menu-item"]}>
-            <NavLink to="/HeadPhones" onClick={toggleMenu}>
+            <NavLink to="/headphones" onClick={toggleMenu}>
               HEADPHONES
             </NavLink>
           </div>
           <div className={styles["menu-item"]}>
-            <NavLink to="/Speakers" onClick={toggleMenu}>
+            <NavLink to="/speakers" onClick={toggleMenu}>
               SPEAKERS
             </NavLink>
           </div>
           <div className={styles["menu-item"]}>
-            <NavLink to="/EarPhones" onClick={toggleMenu}>
+            <NavLink to="/earPhones" onClick={toggleMenu}>
               EARPHONES
             </NavLink>
           </div>

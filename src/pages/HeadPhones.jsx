@@ -17,6 +17,10 @@ function HeadPhones() {
             productInfo={product.productInfo}
             newProduct={product.newProduct}
             isEven={index % 2 === 0}
+            productId={product.productId}
+            features={product.features}
+            price={product.price}
+            gadgetType="headphones"
           />
         ))}
       </div>

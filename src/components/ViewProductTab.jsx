@@ -2,6 +2,8 @@ import styles from "../styles/Products.module.css";
 import Button from "./Button";
 import GoBackBtn from "./GoBackBtn";
 import PropTypes from "prop-types";
+import MainAdvert from "./MainAdvert";
+import ShopShortcutMap from "./ShopShortcut";
 import { useLocation } from "react-router-dom";
 
 export default function ViewProductsTab() {
@@ -64,9 +66,10 @@ export default function ViewProductsTab() {
             </div>
           </div>
         </div>
-
-        <BottomContainer productId={productId} />
       </div>
+      <BottomContainer productId={productId} />
+      <ShopShortcutMap />
+      <MainAdvert />
     </>
   );
 }
@@ -78,14 +81,14 @@ function BottomContainer({ productId }) {
         <div className={styles.bottomleftBox}>
           <img
             src={`/assets/products-gallery/${productId}/image-gallery-1.jpg`}
-            alt="Left Image 1"
+            alt="image-gallery-1"
             className={styles.bottomimage}
           />
         </div>
         <div className={styles.bottomleftBox}>
           <img
             src={`/assets/products-gallery/${productId}/image-gallery-2.jpg`}
-            alt="Left Image 2"
+            alt="image-gallery-2"
             className={styles.bottomimage}
           />
         </div>

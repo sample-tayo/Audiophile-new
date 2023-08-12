@@ -70,6 +70,9 @@
 .features {
   flex: 60%;
 }
+.features p {
+  color: rgba(0, 0, 0, 0.5);
+}
 .whatInTheBox {
   flex: 40%;
 }
@@ -89,6 +92,7 @@ h4 {
   display: flex;
   gap: 1rem;
   margin: 0 7rem;
+  margin-top: 3rem;
 }
 
 .bottom {
@@ -138,6 +142,10 @@ h4 {
   .bottomcontainer {
     flex-direction: column;
     margin: 0 2rem;
+  }
+
+  .bottomcontainer {
+    margin-top: 3rem;
   }
 
   /* styling for the bottom container */
