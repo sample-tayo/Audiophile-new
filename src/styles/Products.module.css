@@ -87,7 +87,7 @@ h4 {
 /* styling for the three images that are meant to be here  */
 .bottomcontainer {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 7rem;
 }
 
@@ -131,5 +131,18 @@ h4 {
   }
   .paddingAdj {
     padding: 0rem;
+  }
+
+  /* styling for feature container */
+  .featuresContainer,
+  .bottomcontainer {
+    flex-direction: column;
+    margin: 0 2rem;
+  }
+
+  /* styling for the bottom container */
+
+  .bottom {
+    gap: 1rem;
   }
 }

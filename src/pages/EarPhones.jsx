@@ -22,6 +22,10 @@ function EarPhones() {
             productInfo={product.productInfo}
             newProduct={product.newProduct}
             isEven={index % 2 === 0}
+            productId={product.productId}
+            // the reason im passing this here is to pass it as props into the button or viewproducts tab display it.. testing... props drilling
+            features={product.features}
+            price={product.price}
           />
         ))}
       </div>
