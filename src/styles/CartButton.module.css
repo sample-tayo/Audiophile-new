@@ -1,0 +1,31 @@
+.cart-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 1.5rem 0.5rem;
+  font-size: 0.2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cart-button:hover {
+  background-color: #d3d3d3;
+}
+.cart-button:hover .cart-icon {
+  color: #d87d4aff;
+}
+
+.cart-count {
+  padding: 1rem 1rem;
+  background-color: #f1f1f1;
+}
+
+.cart-icon {
+  font-size: 0.5rem;
+  margin: 0 0.5rem;
+  font-weight: 300;
+}

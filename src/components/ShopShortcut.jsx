@@ -1,5 +1,6 @@
 import "../styles/ShopShortcut.css";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router";
 import { mainShopItems } from "../constants/constants";
 
 export default function ShopShortcutMap() {
@@ -15,10 +16,16 @@ export default function ShopShortcutMap() {
 // ------nothing i just need space-------------
 
 function ShopShortcut({ item }) {
-  const { title, imgSrc } = item;
+  const { title, imgSrc, targetRoute } = item;
+  const navigate = useNavigate();
+
+  const handleItemClick = () => {
+    navigate(targetRoute);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <div className="ShopShortcutContainer">
+    <div className="ShopShortcutContainer" onClick={handleItemClick}>
       <img src={imgSrc} alt={title} />
       <p style={{ fontWeight: "700", letterSpacing: ".2rem" }}>{title}</p>
       <p className="shophover">
@@ -38,5 +45,6 @@ ShopShortcut.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
+    targetRoute: PropTypes.string.isRequired,
   }).isRequired,
 };

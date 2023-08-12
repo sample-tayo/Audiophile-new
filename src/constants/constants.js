@@ -2,21 +2,29 @@ export const mainShopItems = [
   {
     imgSrc: "/assets/shared/image-headphones.png",
     title: "HEADPHONES",
+    // creating target route here because this is the only way i can pass it to the shopchortcut component
+    targetRoute: "/headphones",
   },
   {
     imgSrc: "/assets/shared/image-speakers.png",
     title: "SPEAKERS",
+    // creating target route here because this is the only way i can pass it to the shopchortcut component
+    targetRoute: "/speakers",
   },
   {
     imgSrc: "/assets/shared/image-earphones.png",
     title: "EARPHONES",
+    // creating target route here because this is the only way i can pass it to the shopchortcut component
+    targetRoute: "/earphones",
   },
 ];
 
 export const HeadPhoneProducts = [
   {
+    productCategory: "headphones",
     productId: "xx99-mark-two-headphones",
     newProduct: true,
+    price: 2999,
     productType: "XX99 MARK II HEADPHONES",
     productInfo:
       "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -29,8 +37,10 @@ export const HeadPhoneProducts = [
     },
   },
   {
+    productCategory: "headphones",
     productId: "xx99-mark-one-headphones",
     newProduct: false,
+    price: 1750,
     productType: "XX99 MARK I HEADPHONES",
     productInfo:
       "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
@@ -43,8 +53,10 @@ export const HeadPhoneProducts = [
     },
   },
   {
+    productCategory: "headphones",
     productId: "xx59-headphones",
     newProduct: false,
+    price: 899,
     productType: "XX59 HEADPHONES",
     productInfo:
       "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -60,8 +72,12 @@ export const HeadPhoneProducts = [
 
 export const SpeakersProducts = [
   {
+    productCategory: "speakers",
     productId: "zx9-speaker",
+
     newProduct: true,
+    price: 4500,
+
     productType: "ZX9 SPEAKER",
     productInfo:
       "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -77,8 +93,13 @@ export const SpeakersProducts = [
     },
   },
   {
+    productCategory: "speakers",
+
     productId: "zx7-speaker",
+
     newProduct: false,
+    price: 3500,
+
     productType: "ZX7 SPEAKER",
     productInfo:
       "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
@@ -96,8 +117,13 @@ export const SpeakersProducts = [
 ];
 export const EarPhonesProducts = [
   {
+    productCategory: "earphones",
+
     productId: "yx1-earphones",
+
     newProduct: true,
+    price: 599,
+
     productType: "YX1 WIRELESS EARPHONES",
     productInfo:
       "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
@@ -111,6 +137,5 @@ export const EarPhonesProducts = [
       paragraph2:
         "The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
     },
-    price: 1000,
   },
 ];

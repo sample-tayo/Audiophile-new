@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "../styles/Button.module.css";
 
-function Button({ bgColor, color, border, onClick }) {
+function Button({ text = "SEE PRODUCT", bgColor, color, border, onClick }) {
   const buttonStyle = {
     backgroundColor: bgColor,
     color: color,
@@ -15,18 +15,19 @@ function Button({ bgColor, color, border, onClick }) {
       // Had to pass the onlcick as props, i thought it would work as a function in the product page but it didn't
       onClick={onClick}
     >
-      SEE PRODUCT
+      {text}
     </button>
   );
 }
 
 Button.propTypes = {
+  text: PropTypes.string,
   bgColor: PropTypes.string,
   color: PropTypes.string,
   hoverBgColor: PropTypes.string,
   hoverColor: PropTypes.string,
   border: PropTypes.any,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default Button;

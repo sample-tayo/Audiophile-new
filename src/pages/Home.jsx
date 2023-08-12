@@ -4,20 +4,19 @@ import AdvertHome from "../components/AdvertHome";
 import Advert02Home from "../components/Advert02Home";
 import Advert03Home from "../components/Advert03Home";
 import MainAdvert from "../components/MainAdvert";
-import { useNavigate } from "react-router-dom";
 
 function Home() {
   // creating the function here because i thing this is the topmost level for my application and probably pass it as props into th outlet
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const navigateToProduct = (productId) => {
-    navigate(`/headphones/${productId}`);
-  };
+  // const navigateToProduct = (productId) => {
+  //   navigate(`/headphones/${productId}`);
+  // };
 
   return (
     <div>
-      <ProductBanner navigateToProduct={navigateToProduct} />
+      <ProductBanner />
       <ShopShortcutMap />
       <AdvertHome />
       <Advert02Home />

@@ -1,8 +1,17 @@
 import styles from "../styles/ProductBanner.module.css";
 import Button from "./Button";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-function ProductBanner({ navigateToProduct }) {
+export default function ProductBanner() {
+  const navigate = useNavigate();
+  const targetRoute = "/headphones/xx99-mark-two-headphones";
+
+  const handleItemClick = () => {
+    console.log("targetroute:", targetRoute);
+    navigate(targetRoute);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={styles.productBanner}>
       <div className={styles.productInfo}>
@@ -12,13 +21,8 @@ function ProductBanner({ navigateToProduct }) {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button onClick={() => navigateToProduct("xx99-mark-two-headphones")} />
+        <Button onClick={handleItemClick} />
       </div>
     </div>
   );
 }
-
-export default ProductBanner;
-ProductBanner.propTypes = {
-  navigateToProduct: PropTypes.func.isRequired,
-};

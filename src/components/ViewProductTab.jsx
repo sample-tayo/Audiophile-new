@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import MainAdvert from "./MainAdvert";
 import ShopShortcutMap from "./ShopShortcut";
 import RandomSuggestedProducts from "./RandomSuggestedProducts";
+import CartButton from "./CartButton";
 import { useLocation } from "react-router-dom";
 
 export default function ViewProductsTab() {
@@ -37,8 +38,20 @@ export default function ViewProductsTab() {
             <div className={styles.textContainer}>
               <p className={styles.heading}>{productType}</p>
               <p className={styles.subText}>{productInfo}</p>
-              <p className="price">{price}</p>
-              <Button />
+              <p
+                className="price"
+                style={{
+                  fontWeight: "700",
+                  fontSize: "1.3rem",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                $ {price.toLocaleString()}
+              </p>
+              <div className={styles.buttonFlex}>
+                <CartButton />
+                <Button text="ADD TO CART" />
+              </div>
             </div>
           </div>
         </div>

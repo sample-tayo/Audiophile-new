@@ -48,7 +48,7 @@
 .subText {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* .paddingAdj {
@@ -120,6 +120,11 @@ h4 {
   justify-content: center;
 }
 
+.buttonFlex {
+  display: flex;
+  gap: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column !important;
@@ -135,6 +140,9 @@ h4 {
   }
   .paddingAdj {
     padding: 0rem;
+  }
+  .buttonFlex {
+    flex-direction: column;
   }
 
   /* styling for feature container */
