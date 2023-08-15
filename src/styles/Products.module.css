@@ -142,7 +142,7 @@ h4 {
     padding: 0rem;
   }
   .buttonFlex {
-    flex-direction: column;
+    justify-content: center;
   }
 
   /* styling for feature container */

@@ -7,8 +7,9 @@ import ShopShortcutMap from "./ShopShortcut";
 import RandomSuggestedProducts from "./RandomSuggestedProducts";
 import CartButton from "./CartButton";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
-export default function ViewProductsTab() {
+export default function ViewProductsTab({ addToCart }) {
   // to get the current url location
   const location = useLocation();
   // this props below is passed from the handleclickbutton function in products component
@@ -20,6 +21,19 @@ export default function ViewProductsTab() {
     productImgSrc,
     productId,
   } = location.state;
+
+  // function to pass props into the cart
+  const handleAddToCart = () => {
+    const newItem = {
+      productType,
+      price,
+      productImgSrc,
+      quantity: productQuantity,
+    };
+    addToCart(newItem);
+  };
+
+  const [productQuantity, setProductQuantity] = useState(0);
 
   return (
     <>
@@ -49,8 +63,18 @@ export default function ViewProductsTab() {
                 $ {price.toLocaleString()}
               </p>
               <div className={styles.buttonFlex}>
-                <CartButton />
-                <Button text="ADD TO CART" />
+                <CartButton
+                  quantity={productQuantity}
+                  increment={() =>
+                    setProductQuantity((prevCount) => prevCount + 1)
+                  }
+                  decrement={() =>
+                    setProductQuantity((prevCount) =>
+                      prevCount > 0 ? prevCount - 1 : prevCount
+                    )
+                  }
+                />
+                <Button text="ADD TO CART" onClick={handleAddToCart} />
               </div>
             </div>
           </div>
@@ -122,6 +146,9 @@ function BottomContainer({ productId }) {
 
 BottomContainer.propTypes = {
   productId: PropTypes.string.isRequired,
+};
+ViewProductsTab.propTypes = {
+  addToCart: PropTypes.func.isRequired,
 };
 
 // ViewProductsTab.propTypes = {

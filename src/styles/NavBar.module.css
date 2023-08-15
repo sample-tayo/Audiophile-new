@@ -21,6 +21,9 @@ a {
 .cart {
   order: 2;
 }
+.cart:hover {
+  cursor: pointer;
+}
 .menu-icon {
   order: 4;
   color: #fff;
