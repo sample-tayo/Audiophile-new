@@ -1,17 +1,15 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
-import styles from "../styles/SuggestedLike.module.css";
-import { useNavigate } from "react-router";
+import styles from "./styles/SuggestedLike.module.css";
+import { navigateToProduct } from "../../utils/navigateToProduct";
 
 function SuggestedLike({ product }) {
+  const handleItemClick = navigateToProduct(product);
+
   var { productType, productImgSrc, productId, productCategory } = product;
   //   i imported productCategory and productId because they are the props needed to navigate each product that will be mapped
 
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    navigate(`/${productCategory}/${productId}`);
-    console.log(navigate);
-  };
+  //productID and productCategory no longer needed here since icreated a function navigate to product
 
   //   some image src will return  string while some will return objects.. IfElse statment to know which one to pick, like the headphone img src will return a string
   let imgSrc = "";
@@ -26,7 +24,7 @@ function SuggestedLike({ product }) {
       <div className={styles.suggestedComponent}>
         <img src={imgSrc} alt={productType} width="100%" height="100%" />
         <p>{productType}</p>
-        <Button onClick={handleButtonClick} />
+        <Button onClick={handleItemClick} />
       </div>
     </div>
   );

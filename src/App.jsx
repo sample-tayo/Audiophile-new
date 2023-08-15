@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import HeadPhones from "./pages/HeadPhones";
 import EarPhones from "./pages/EarPhones";
 import Speakers from "./pages/Speakers";
+import Checkout from "./pages/Checkout";
 // import components
 import ViewProductsTab from "./components/ViewProductTab";
 
@@ -65,6 +66,7 @@ export default function App() {
           path="speakers/:id"
           element={<ViewProductsTab addToCart={addToCart} />}
         />
+        <Route path="checkout" element={<Checkout cartItems={cartItems} />} />
       </Route>
     )
   );

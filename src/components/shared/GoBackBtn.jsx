@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from "../styles/Goback.module.css";
+import styles from "./styles/Goback.module.css";
 
 function GoBackBtn() {
   const navigate = useNavigate();

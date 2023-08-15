@@ -1,5 +1,5 @@
 // import { useParams } from "react-router-dom";
-import ShopShortcutMap from "../components/ShopShortcut";
+import ShopShortcutMap from "../components/shared/ShopShortcut";
 import MainAdvert from "../components/MainAdvert";
 import PageType from "../components/PageType";
 import { SpeakersProducts } from "../constants/constants";

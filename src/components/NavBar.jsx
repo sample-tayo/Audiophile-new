@@ -2,10 +2,10 @@ import { useState } from "react";
 import styles from "../styles/NavBar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import Cart from "./CartContainer";
+import Cart from "./shared/CartContainer";
 import PropTypes from "prop-types";
 
-export default function Navbar({ cartItems, setCartItems }) {
+export default function Navbar({ cartItems, setCartItems, totalPrice }) {
   const [menuOpen, setMenuOpen] = useState(true);
   const [cartOpen, setCartOpen] = useState(false);
 
@@ -66,6 +66,7 @@ export default function Navbar({ cartItems, setCartItems }) {
         onCloseCart={closeCart}
         cartItems={cartItems}
         setCartItems={setCartItems}
+        totalPrice={totalPrice}
       />
     </>
   );
@@ -73,4 +74,5 @@ export default function Navbar({ cartItems, setCartItems }) {
 Navbar.propTypes = {
   cartItems: PropTypes.array,
   setCartItems: PropTypes.func,
+  totalPrice: PropTypes.func,
 };

@@ -1,7 +1,7 @@
-import "../styles/ShopShortcut.css";
+import "./styles/ShopShortcut.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
-import { mainShopItems } from "../constants/constants";
+import { mainShopItems } from "../../constants/constants";
 
 export default function ShopShortcutMap() {
   return (

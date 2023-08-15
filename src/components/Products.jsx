@@ -1,5 +1,5 @@
 import styles from "../styles/Products.module.css";
-import Button from "./Button";
+import Button from "./shared/Button";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 function Products({
@@ -13,6 +13,9 @@ function Products({
   price,
   gadgetType,
 }) {
+  // ffs i can't even remember which component im drawing this props from
+  //passing this props here because i rendered this Product component on HEADPHONES PAGE, SPEAKERS PAGE and EARPHONES PAGE.
+
   // STYLING TO REVERSE FLEX DIRECTION FOR EVEN CHILDS
   const containerStyle = {
     flexDirection: !isEven ? "row-reverse" : "row",

@@ -1,9 +1,9 @@
-import ProductBanner from "../components/ProductBanner";
-import ShopShortcutMap from "../components/ShopShortcut";
-import AdvertHome from "../components/AdvertHome";
-import Advert02Home from "../components/Advert02Home";
-import Advert03Home from "../components/Advert03Home";
+import ShopShortcutMap from "../components/shared/ShopShortcut";
 import MainAdvert from "../components/MainAdvert";
+import ProductBanner from "../components/HomepageAdvert/ProductBanner";
+import AdvertHome from "../components/HomepageAdvert/AdvertHome";
+import Advert02Home from "../components/HomepageAdvert/Advert02Home";
+import Advert03Home from "../components/HomepageAdvert/Advert03Home";
 
 function Home() {
   // creating the function here because i thing this is the topmost level for my application and probably pass it as props into th outlet

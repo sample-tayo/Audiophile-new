@@ -30,8 +30,8 @@ const CartButton = ({ quantity, increment, decrement }) => {
 
 CartButton.propTypes = {
   quantity: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
+  increment: PropTypes.func,
+  decrement: PropTypes.func,
 };
 
 export default CartButton;

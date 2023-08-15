@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "../styles/Cart.module.css";
-import CartButton from "./CartButton";
+import styles from "./styles/Cart.module.css";
+import CartButton from "../CartButton";
 import Button from "./Button";
 import { BsCart3 } from "react-icons/bs";
 
@@ -56,7 +57,6 @@ export default function Cart({
     };
   }, [cartOpen, onCloseCart]);
 
-  // func to calculate the total price of items in the cart
   const totalPrice = () => {
     const totalPrice = cartItems.reduce((total, item) => {
       return total + item.quantity * item.price;
@@ -78,45 +78,55 @@ export default function Cart({
               <BsCart3 className={styles.cartIcon} />
             </div>
           ) : (
-            <div className={styles.cartHeader}>
-              <p className={styles.cartLength}>
-                CART <span>({cartItems.length})</span>
-              </p>
-              <p className={styles.removeAll} onClick={() => setCartItems([])}>
-                Remove All
-              </p>
-            </div>
-          )}
-          <ul>
-            {cartItems.map((item, index) => (
-              <li key={index}>
-                <div className={styles.cartLeft}>
-                  <img
-                    src={item.productImgSrc}
-                    alt={item.productType}
-                    width="25%"
-                    height="30%"
-                  />
-                  <p className={styles.productType}>
-                    {item.productType}
-                    <span>${item.price.toLocaleString()}</span>
+            <>
+              <div className={styles.cartHeader}>
+                <p className={styles.cartLength}>
+                  CART <span>({cartItems.length})</span>
+                </p>
+                <p
+                  className={styles.removeAll}
+                  onClick={() => setCartItems([])}
+                >
+                  Remove All
+                </p>
+              </div>
+
+              <ul>
+                {cartItems.map((item, index) => (
+                  <li key={index}>
+                    <div className={styles.cartLeft}>
+                      <img
+                        src={item.productImgSrc}
+                        alt={item.productType}
+                        width="25%"
+                        height="30%"
+                      />
+                      <p className={styles.productType}>
+                        {item.productType}
+                        <span>${item.price.toLocaleString()}</span>
+                      </p>
+                    </div>
+                    <CartButton
+                      quantity={item.quantity}
+                      increment={() => incrementQuantity(item.productId)}
+                      decrement={() => decrementQuantity(item.productId)}
+                    />
+                    {/* <p>productID: {item.productId}</p> */}
+                  </li>
+                ))}
+                <div className={styles.totalPrice}>
+                  <p style={{ fontSize: ".9rem" }}>TOTAL</p>
+                  <p style={{ fontWeight: "700" }}>
+                    $ {totalPrice().toLocaleString()}
                   </p>
                 </div>
-                <CartButton
-                  quantity={item.quantity}
-                  increment={() => incrementQuantity(item.productId)}
-                  decrement={() => decrementQuantity(item.productId)}
-                />
-              </li>
-            ))}
-            <div className={styles.totalPrice}>
-              <p style={{ fontSize: ".9rem" }}>TOTAL</p>
-              <p style={{ fontWeight: "700" }}>
-                $ {totalPrice().toLocaleString()}
-              </p>
-            </div>
-          </ul>
-          <Button text="CHECKOUT" />
+              </ul>
+
+              <NavLink to="/checkout">
+                <Button text="CHECKOUT" />
+              </NavLink>
+            </>
+          )}
         </div>
       </div>
     </>

@@ -1,13 +1,14 @@
-import ShopShortcutMap from "../components/ShopShortcut";
+import ShopShortcutMap from "../components/shared/ShopShortcut";
 import MainAdvert from "../components/MainAdvert";
 import PageType from "../components/PageType";
 import Products from "../components/Products";
 import { HeadPhoneProducts } from "../constants/constants";
 
-function HeadPhones() {
+export default function HeadPhones() {
   return (
     <div>
       <PageType pagetype="HEADPHONES" />
+
       <div className="products-map">
         {HeadPhoneProducts.map((product, index) => (
           <Products
@@ -24,11 +25,10 @@ function HeadPhones() {
           />
         ))}
       </div>
+      {/* dummmy testing to delete later */}
       {/* <Products /> */}
       <ShopShortcutMap />
       <MainAdvert />
     </div>
   );
 }
-
-export default HeadPhones;

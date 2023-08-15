@@ -1,13 +1,15 @@
 import styles from "../styles/Products.module.css";
-import Button from "./Button";
-import GoBackBtn from "./GoBackBtn";
 import PropTypes from "prop-types";
-import MainAdvert from "./MainAdvert";
-import ShopShortcutMap from "./ShopShortcut";
-import RandomSuggestedProducts from "./RandomSuggestedProducts";
-import CartButton from "./CartButton";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+
+//component import
+import Button from "./shared/Button";
+import GoBackBtn from "./shared/GoBackBtn";
+import MainAdvert from "./MainAdvert";
+import ShopShortcutMap from "./shared/ShopShortcut";
+import RandomSuggestedProducts from "./RandomSuggestedProducts";
+import CartButton from "./CartButton";
 
 export default function ViewProductsTab({ addToCart }) {
   // to get the current url location
@@ -29,6 +31,7 @@ export default function ViewProductsTab({ addToCart }) {
       price,
       productImgSrc,
       quantity: productQuantity,
+      productId,
     };
     addToCart(newItem);
   };

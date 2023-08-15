@@ -1,0 +1,12 @@
+.summaryContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 7rem 7rem 7rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 640px) {
+  .summaryContainer {
+    flex-direction: column;
+    margin: 2rem;
+  }
+}

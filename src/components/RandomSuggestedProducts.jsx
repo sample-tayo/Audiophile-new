@@ -1,5 +1,5 @@
-import styles from "../styles/SuggestedLike.module.css";
-import SuggestedLike from "./SuggestedLike";
+import styles from "./shared/styles/SuggestedLike.module.css";
+import SuggestedLike from "./shared/SuggestedLike";
 import {
   EarPhonesProducts,
   HeadPhoneProducts,
