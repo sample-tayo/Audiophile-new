@@ -9,6 +9,10 @@ import {
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 
+//toast notification
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // import pages
 import Home from "./pages/Home";
 import HeadPhones from "./pages/HeadPhones";
@@ -41,6 +45,17 @@ export default function App() {
       updatedCartItems[itemIndex] = item;
       setCartItems(updatedCartItems);
     }
+
+    toast.success(`${item.productType} added to cart`, {
+      position: "top-left",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   };
 
   const router = createBrowserRouter(
@@ -79,6 +94,7 @@ export default function App() {
         <title>Audiophile</title>
       </Helmet>
       <RouterProvider router={router} />
+      <ToastContainer />
     </div>
   );
 }
