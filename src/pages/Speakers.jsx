@@ -4,10 +4,13 @@ import MainAdvert from "../components/MainAdvert";
 import PageType from "../components/PageType";
 import { SpeakersProducts } from "../constants/constants";
 import Products from "../components/Products";
+import { usePageTitle } from "../utils/updatePageTitle";
+
 // import ViewProductsTab from "../components/ViewProductTab";
 const isMobile = window.innerWidth < 600;
 
 function Speakers() {
+  usePageTitle("Audiophine - Speakers");
   return (
     <div>
       <PageType pagetype="SPEAKERS" />

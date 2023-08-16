@@ -1,6 +1,7 @@
 import "./styles/ShopShortcut.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { mainShopItems } from "../../constants/constants";
 
 export default function ShopShortcutMap() {
@@ -29,7 +30,7 @@ function ShopShortcut({ item }) {
       <img src={imgSrc} alt={title} />
       <p style={{ fontWeight: "700", letterSpacing: ".2rem" }}>{title}</p>
       <p className="shophover">
-        SHOP
+        SHOP <MdOutlineKeyboardArrowRight fill="#d87d4a" fontSize="2rem" />
         {/* <img
           src="/assets/shared/icon-arrow-right.svg"
           alt=""

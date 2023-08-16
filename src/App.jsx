@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 // import pages
 import Home from "./pages/Home";
@@ -73,6 +74,10 @@ export default function App() {
 
   return (
     <div>
+      <Helmet>
+        {/* page title */}
+        <title>Audiophile</title>
+      </Helmet>
       <RouterProvider router={router} />
     </div>
   );

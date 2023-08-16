@@ -84,11 +84,11 @@ a {
   position: absolute;
   bottom: 1rem;
   right: -1rem;
-  background-color: red;
+  background-color: #d87d4a;
   color: white;
   border-radius: 50%;
-  padding: 4px 8px;
-  font-size: 12px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 

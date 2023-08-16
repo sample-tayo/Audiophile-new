@@ -3,8 +3,10 @@ import MainAdvert from "../components/MainAdvert";
 import PageType from "../components/PageType";
 import Products from "../components/Products";
 import { HeadPhoneProducts } from "../constants/constants";
+import { usePageTitle } from "../utils/updatePageTitle";
 
 export default function HeadPhones() {
+  usePageTitle("Audiophine - Headphones");
   return (
     <div>
       <PageType pagetype="HEADPHONES" />

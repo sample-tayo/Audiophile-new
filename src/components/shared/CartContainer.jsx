@@ -78,7 +78,7 @@ export default function Cart({
               <BsCart3 className={styles.cartIcon} />
             </div>
           ) : (
-            <>
+            <div className={styles.subContainer}>
               <div className={styles.cartHeader}>
                 <p className={styles.cartLength}>
                   CART <span>({cartItems.length})</span>
@@ -123,9 +123,9 @@ export default function Cart({
               </ul>
 
               <NavLink to="/checkout">
-                <Button text="CHECKOUT" />
+                <Button text="CHECKOUT" onClick={() => onCloseCart()} />
               </NavLink>
-            </>
+            </div>
           )}
         </div>
       </div>

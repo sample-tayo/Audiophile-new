@@ -4,6 +4,7 @@ import ProductBanner from "../components/HomepageAdvert/ProductBanner";
 import AdvertHome from "../components/HomepageAdvert/AdvertHome";
 import Advert02Home from "../components/HomepageAdvert/Advert02Home";
 import Advert03Home from "../components/HomepageAdvert/Advert03Home";
+import { usePageTitle } from "../utils/updatePageTitle";
 
 function Home() {
   // creating the function here because i thing this is the topmost level for my application and probably pass it as props into th outlet
@@ -13,6 +14,8 @@ function Home() {
   // const navigateToProduct = (productId) => {
   //   navigate(`/headphones/${productId}`);
   // };
+
+  usePageTitle("Audiophine - Home");
 
   return (
     <div>

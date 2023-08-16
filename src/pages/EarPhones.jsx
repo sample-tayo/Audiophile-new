@@ -3,9 +3,12 @@ import MainAdvert from "../components/MainAdvert";
 import PageType from "../components/PageType";
 import Products from "../components/Products";
 import { EarPhonesProducts } from "../constants/constants";
+import { usePageTitle } from "../utils/updatePageTitle";
+
 const isMobile = window.innerWidth < 600;
 
 function EarPhones() {
+  usePageTitle("Audiophine - Earphones");
   return (
     <div>
       <PageType pagetype="EARPHONES" />

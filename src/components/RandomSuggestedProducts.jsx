@@ -22,10 +22,11 @@ function RandomSuggestedProducts() {
     <>
       <p
         style={{
-          fontSize: "2.5rem",
+          fontSize: "2rem",
           textAlign: "center",
           fontWeight: "700",
-          margin: "2rem",
+          marginTop: "7rem",
+          paddingBottom: "1rem",
         }}
       >
         YOU MAY ALSO LIKE

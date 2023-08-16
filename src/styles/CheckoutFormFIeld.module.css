@@ -2,7 +2,7 @@
 Form {
   background-color: #fff;
   border-radius: 1rem;
-  padding: 2rem 1rem;
+  padding: 2rem 3rem;
 }
 
 .userDetails {
@@ -10,6 +10,10 @@ Form {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+input::placeholder {
+  font-weight: 600;
+  opacity: 0.3;
 }
 
 h5 {
@@ -37,14 +41,14 @@ h2 {
 .inputField input,
 select {
   outline: none;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: #333;
   border-radius: 5px;
   border: 1px solid #aaa;
   padding: 0 15px;
   height: 42px;
-  margin: 8px 0;
+  margin: 8px 0 4px 0;
 }
 .inputField :focus,
 .inputField select:focus {
@@ -70,6 +74,11 @@ select {
 .paymentContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.error {
+  font-size: 0.6rem;
+  color: #d87d4a;
 }
 
 @media (max-width: 750px) {

@@ -14,7 +14,7 @@ export default function Navbar({ cartItems, setCartItems, totalPrice }) {
   };
 
   const toggleCart = () => {
-    console.log("cart-open");
+    // console.log("cart-open");
     setCartOpen(!cartOpen);
   };
 
@@ -34,7 +34,7 @@ export default function Navbar({ cartItems, setCartItems, totalPrice }) {
         <nav className={styles.navbar}>
           <div className={styles["navbar-logo"]}>
             <NavLink to="/">
-              <img src="./assets/logo.svg" alt="logo" />
+              <img src="/assets/logo.svg" alt="logo" />
             </NavLink>
           </div>
           <div className={`${styles.menu} ${menuOpen ? styles.open : ""}`}>

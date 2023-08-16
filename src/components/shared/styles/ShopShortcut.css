@@ -33,17 +33,24 @@
 }
 
 .shophover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.1rem;
   color: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .ShopShortcutMap {
     flex-direction: column;
-    margin: 4rem 0;
+    margin: 4rem 2rem;
     gap: 4rem;
     justify-content: center;
     align-items: center;
+  }
+  .ShopShortcutContainer {
+    width: 100%;
   }
 }

@@ -25,7 +25,7 @@
 @media screen and (max-width: 768px) {
   .productBanner {
     background: url("/assets/image-speaker-zx7-m.jpg") bottom/cover no-repeat;
-    margin: 2rem 1rem;
+    margin: 2rem 2rem;
     height: 22rem;
   }
   .productInfo {

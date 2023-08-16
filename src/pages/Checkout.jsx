@@ -1,6 +1,7 @@
 //for formik & yup
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { usePageTitle } from "../utils/updatePageTitle";
 
 import PropTypes from "prop-types";
 import checkoutstyles from "../styles/CheckoutFormFIeld.module.css"; //path change
@@ -9,6 +10,8 @@ import styles from "../styles/CheckoutPage.module.css";
 import GoBackBtn from "../components/shared/GoBackBtn";
 import Summary from "../components/Summary";
 function Checkout({ cartItems }) {
+  usePageTitle("Audiophine - Checkout");
+
   return (
     <>
       <GoBackBtn />
@@ -41,7 +44,7 @@ function CheckoutFormField() {
                     <label htmlFor="name">Name</label>
                     <Field
                       type="text"
-                      placeholder="full name"
+                      placeholder="Sample Tayo"
                       name="name"
                       id="name"
                       className={`${checkoutstyles.formField} ${
@@ -52,7 +55,12 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="name" />
+                    {/* <ErrorMessage name="name" /> */}
+                    <ErrorMessage name="name">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
 
                   <div className={checkoutstyles.inputField}>
@@ -70,14 +78,19 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="email" />
+                    {/* <ErrorMessage name="email" /> */}
+                    <ErrorMessage name="email">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
 
                   <div className={checkoutstyles.inputField}>
                     <label htmlFor="phoneNumber">Phone Number</label>
                     <Field
                       type="text"
-                      placeholder="+234 90 6913 7526"
+                      placeholder="e.g. +234 90 6913 7526"
                       name="phoneNumber"
                       id="phoneNumber"
                       className={`${checkoutstyles.formField} ${
@@ -88,7 +101,12 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="phoneNumber" />
+                    {/* <ErrorMessage name="phoneNumber" /> */}
+                    <ErrorMessage name="phoneNumber">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
                 </div>
               </div>
@@ -102,7 +120,7 @@ function CheckoutFormField() {
                     <label htmlFor="address">Your Address</label>
                     <Field
                       type="text"
-                      placeholder="11 mobolaji junction"
+                      placeholder="11 Mobolaji Junction"
                       name="address"
                       id="address"
                       classaddress={`${checkoutstyles.formField} ${
@@ -113,7 +131,12 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="address" />
+                    {/* <ErrorMessage name="address" /> */}
+                    <ErrorMessage name="address">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
 
                   <div className={checkoutstyles.inputField}>
@@ -131,7 +154,12 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="zipCode" />
+                    {/* <ErrorMessage name="zipCode" /> */}
+                    <ErrorMessage name="zipCode">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
 
                   <div className={checkoutstyles.inputField}>
@@ -149,13 +177,18 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="city" />
+                    {/* <ErrorMessage name="city" /> */}
+                    <ErrorMessage name="city">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
                   <div className={checkoutstyles.inputField}>
                     <label htmlFor="country">Country</label>
                     <Field
                       type="text"
-                      placeholder="Naija"
+                      placeholder="Nigeria"
                       name="country"
                       id="country"
                       className={`${checkoutstyles.formField} ${
@@ -166,7 +199,12 @@ function CheckoutFormField() {
                           : ""
                       }`}
                     />
-                    <ErrorMessage name="country" />
+                    {/* <ErrorMessage name="country" /> */}
+                    <ErrorMessage name="country">
+                      {(errMsg) => (
+                        <div className={checkoutstyles.error}>{errMsg}</div>
+                      )}
+                    </ErrorMessage>
                   </div>
                 </div>
               </div>

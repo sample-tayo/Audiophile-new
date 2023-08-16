@@ -129,6 +129,7 @@ h4 {
   .container {
     flex-direction: column !important;
     margin: 2rem;
+    gap: 0rem;
   }
   .textContainer {
     text-align: center;
