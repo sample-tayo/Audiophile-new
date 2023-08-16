@@ -21,6 +21,13 @@ export default function Navbar({ cartItems, setCartItems, totalPrice }) {
   const closeCart = () => {
     setCartOpen(false);
   };
+
+  //to calculate total quantity in the cart
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <>
       <div className={styles.navContainer}>
@@ -55,6 +62,9 @@ export default function Navbar({ cartItems, setCartItems, totalPrice }) {
 
           <div className={styles.cart} onClick={toggleCart}>
             <img src="/assets/shared/icon-cart.svg" alt="cart" />
+            {totalQuantity > 0 && (
+              <span className={styles.cartBadge}>{totalQuantity}</span>
+            )}
           </div>
           <div className={styles["menu-icon"]} onClick={toggleMenu}>
             {menuOpen ? <FaBars /> : <FaTimes />}
