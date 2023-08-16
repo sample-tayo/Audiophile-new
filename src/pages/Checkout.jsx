@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import PropTypes from "prop-types";
-import checkoutstyles from "../styles/CheckoutFormField.module.css"; //path change
+import checkoutstyles from "../styles/CheckoutFormFIeld.module.css"; //path change
 import styles from "../styles/CheckoutPage.module.css";
 
 import GoBackBtn from "../components/shared/GoBackBtn";
